@@ -4,18 +4,18 @@ Um chatbot simples desenvolvido com Python, Flet e Gemini
 
 ## Como rodar
 
-###Clone o repositório: 
+### Clone o repositório: 
 git clone https://github.com/johannossanes/chatbot-python
 
-###Instale as dependências:
+### Instale as dependências:
 
 pip install google-generativeai
 pip instlall flet 
 
-###Substitua:
+### Substitua:
 "SUA_API" pela sua API_KEY do Gemini 
 
-###Execute: 
+### Execute: 
 python chatbot.py
 
 E aproveite :) 
