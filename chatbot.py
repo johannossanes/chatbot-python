@@ -2,7 +2,7 @@ import flet as ft
 import google.generativeai as genai
 
 # Configurar sua API Key aqui
-genai.configure(api_key="SUA_API")
+genai.configure(api_key=" ")
 
 model = genai.GenerativeModel("gemini-1.5-flash")
 
@@ -44,7 +44,7 @@ def main(page: ft.Page):
         
         chat_display.controls.append(
             ft.Container(
-                content=ft.Text(f"Você: {user_input.value}", size=14, color="#BB86FC"),
+                content=ft.Text(f"Você: {user_input.value}", size=14, color="#BB86FC", font_family="Consolas"),
                 padding=10,
                 # bgcolor="#2C2C2C",
                 border_radius=6
@@ -56,10 +56,10 @@ def main(page: ft.Page):
         resposta = chatbot(user_input.value)
         chat_display.controls.append(
             ft.Container(
-                content=ft.Text(f"Gemini: {resposta}", size=14, color="#03DAC5"),
+                content=ft.Text(f"Gemini: {resposta}", size=14, color="#03DAC5", font_family="Consolas"),
                 padding=10,
                 # bgcolor="#1F1F1F",
-                border_radius=6
+                border_radius=6,
             )
         )
         user_input.value = ""
@@ -70,7 +70,7 @@ def main(page: ft.Page):
     page.add(
         ft.Container(
             content=ft.Column([
-                ft.Text("Chatbot com Gemini", size=24, weight="bold", color="#BB86FC"),
+                ft.Text("Chatbot com Gemini", size=24, weight="bold", color="#BB86FC", font_family="Consolas"),
                 ft.Divider(color="#333333"),
                 ft.Container(
                     content=chat_display,
